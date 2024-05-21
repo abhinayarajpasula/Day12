@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kazi Nazrul Islam</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Set the background image */
+    .hero-section {
+        background-image: url('https://example.com/path/to/your-background-image.jpg'); 
+        background-size: cover;
+        background-position: center;
+        height: 55vh;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        background-color: black; 
+    }
+    /* Overlay effect for better text visibility */
+    .hero-overlay {
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .navbar {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 10px; 
+    }
+    .navbar-nav {
+        margin-left: 20px; 
+    }
+    .hero-heading {
+        margin-top: 8rem; 
+    }
+    .hero-heading h2 {
+        font-size: 4rem;
+    }
+    .content-section {
+        padding: 50px 0;
+        background-color: #f8f9fa; 
+    }
+    .content-section img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+    .button-section {
+        padding: 20px 0;
+        background-color: #f8f9fa; 
+    }
+    .btn i {
+        margin-right: 10px;
+    }
+    .btn-secondary {
+        background-color: lightgrey !important;
+        border-color: lightgrey !important;
+        color: rgb(88, 85, 85) !important;
+    }
+    .btn-secondary i {
+        color: #645858;
+    }
+    .btn-warning {
+        background-color: #d36f5c !important; 
+        border-color: #d36f5c !important;
+        color: #ffff !important;
+    }
+    .btn-warning i {
+        color: #f8f9fa;
+    }
+    .quote-section {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 40px 20px;
+        margin: 30px 0;
+    }
+    .quote-section p {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    .awards-section {
+        text-align: center;
+        margin: 40px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .awards-section hr {
+        border: none;
+        border-top: 1px solid #ddd;
+        margin: 0 10px;
+        width: 100%;
+    }
+    .awards-section .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .awards-section .content i {
+        margin-right: 5px;
+        color: black; 
+        font-size: 2rem; 
+    }
+    .awards-section .content b {
+        font-size: 1.5rem;
+    }
+    .cards-section {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+    .card {
+        margin: 15px;
+        border: 1px solid #ddd; 
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+        height: 180px; 
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card-body {
+        text-align: left;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-text.year {
+        color: #a89e9e !important; 
+        font-size: 0.9rem;
+    }
+
+    .card-text.year {
+        height: 20px; 
+    }
+
+    .card-text.source {
+        color: #888181; 
+        font-size: 0.9rem;
+    }
+    .content-columns {
+        padding: 50px 0;
+        background-color: #f8f9fa;
+    }
+    .content-columns .column-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 0 10px;
+        background: #f8f9fa;
+    }
+    .content-columns .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .content-columns .content hr {
+        flex-grow: 1;
+        border: none;
+        border-top: 1px solid #ddd;
+        margin: 0 10px;
+    }
+    .content-columns ul {
+        text-align: left;
+        padding-left: 0;
+        list-style-position: inside; 
+    }
+    /* Footer Section */
+    .footer-section {
+        background-color: black;
+        color: white;
+        padding: 50px 0;
+    }
+    .footer-section .footer-column {
+        padding: 0 20px;
+        text-align: left;
+    }
+    .footer-section .footer-column:not(:last-child) {
+        border-right: 1px solid #848181; 
+    }
+    .footer-section h5 {
+        color: #ffffff;
+    }
+    .footer-section p {
+        color: #dddddd;
+    }
+    .footer-section .footer-column p .first-span {
+        color: #848181;
+    }
+    .footer-section .footer-column p.second-span {
+        color: #848181;
+    }
+    .footer-section .footer-column p .last-span {
+        color: #007bff; 
+    }
+</style>
+</head>
+<body>
+    <!-- Hero Section with Navbar and Headings -->
+    <section class="hero-section">
+        <div class="hero-overlay">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Achievements</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Headings -->
+            <div class="text-center hero-heading mb-5">
+                <h2>Kazi Nazrul Islam</h2>
+                <h5>The national poet of Bangladesh</h5>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section with Two Columns -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row">
+                <!-- First Column with Two Rows -->
+                <div class="col-md-6">
+                    <div class="row mb-4">
+                        <div class="col">
+                            <h3>Rebel Poet</h3>
+                            <p>Kazi Nazrul Islam is the national poet of Bangladesh who is especially recognized as Bidrohi Kobi(Rebel poet) around the country. Nazrul is a famous poet, musician, and philosopher of Bangladesh. The famous poet Nazrul's writings deal with the revolution of that period of the British government. His revolutionary attempt helped him to be a national poet of Bangladesh. He has raised his voice against any kinds of fascism and oppression and got popularity swiftly around the Indian Subcontinent.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h3>Awesome Writer</h3>
+                            <p>Nazrul writings explored themes susch as love, freedom, humanity and revolution. He opposed all forms of bigotry and fundamentalism, including religious, caste-based and gender-based. Throughout his carrer, Nazrul wrote short stories , novels, and essays but is best known for his songs and poems. He poineered new music forms such as Bengali ghazals. Nazrul wrote and composed music for nearly 4,000 songs(many recorded on HMV and gramphone records), collectively known as Nazrul Geeti.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second Column with Image -->
+                <div class="col-md-6 text-center">
+                    <img src="https://i.pinimg.com/564x/dd/2c/54/dd2c54b9e2675b04b9b766d955385359.jpg" alt="Kazi Nazrul Islam">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Button Section -->
+    <section class="button-section text-center">
+        <div class="container">
+            <button type="button" class="btn btn-secondary btn-lg m-2">
+                <i class="fab fa-wikipedia-w"></i> Learn More
+            </button>
+            <button type="button" class="btn btn-danger btn-lg m-2">
+                <i class="fab fa-youtube"></i> Videos
+            </button>
+            <button type="button" class="btn btn-warning btn-lg m-2">
+                <i class="fab fa-amazon"></i> Books
+            </button>
+        </div>
+    </section>
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container">
+            <p>"Love has no meaning or amount". -Kazi Nazrul Islam</p>
+        </div>
+    </section>
+    <!-- Awards Section -->
+    <section class="awards-section">
+        <hr>
+        <div class="content">
+            <i class="fas fa-star"></i>Awards
+        </div>
+        <hr>
+    </section>
+       <!-- Cards Section -->
+    <section class="cards-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Jagattarini Gold Medal</h5>
+                            <p class="card-text year">1945</p>
+                            <p class="card-text source">From the University of Calcutta for his work in Bengali Literature.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Padma Bhushan</h5>
+                            <p class="card-text year">1960</p>
+                            <p class="card-text source">One of the highest civilian honors of the Republic of India.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">National Poet</h5>
+                            <p class="card-text year"></p>
+                            <p class="card-text source">Conferred the title by the Government of Bangladesh.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Ekushey Padak</h5>
+                            <p class="card-text year">1976</p>
+                            <p class="card-text source">Bangladesh's highest civilian honours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Content Columns Section -->
+    <section class="content-columns">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center">
+                    <div class="content">
+                        <hr>
+                        <span class="column-title">Poetry</span>
+                        <hr>
+                    </div>
+                    <ul>
+                        <li>Agni Bina (The Fiery Lute), 1922.</li>
+                        <li>Sanchita (Collected poems), 1925.</li>
+                        <li>Phanimanasa (The Cactus), 1927.</li>
+                        <li>Chakrabak (The Flamingo), 1929.</li>
+                        <li>Satbhai Champa (The seven Brothers of Champa), juvenile poems, 1933.</li>
+                        <li>Nirjhar (Fountain), 1939.</li>
+                        <li>Natun Chand (The New Moon), 1939.</li>
+                        <li>Morubhaskar (The Sun in the Desert), 1951.</li>
+                        <li>Sanchayan (Collected Poems), 1955.</li>
+                        <li>Nazrul Islam: Islami Koblta (A Collection of Islamic Poems; Dhaka, Bangladesh: Islamic Foundation, 1982).</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-center">
+                    <div class="content">
+                        <hr>
+                        <span class="column-title">Poems and Songs</span>
+                        <hr>
+                    </div>
+                    <ul>
+                        <li>Dola Chapa (name of a faintly fragment monsoon flower), 1923.</li>
+                        <li>Bisher Bashi (The Poison Flute), 1924</li>
+                        <li>Bhangar Gan (The Song of Destruction), 1924 proscribe in 1924.</li>
+                        <li>Chhayanat (The Raga of Chhayanat), 1925.</li>
+                        <li>Chittanama (On Chittaranjan), 1925.</li>
+                        <li>Samyabadi (The Proclaimer of Equality), 1926.</li>
+                        <li>Puber Hawa (The Eastern Windi), 1926.</li>
+                        <li>Sarbahara (The Proletariat), 1926.</li>
+                        <li>Sindhu Hindol (The Undulation of the Sea), 1927.</li>
+                        <li>Jinjir (Chain), 1928.</li>
+                        <li>Pralaya Shikha (Doomsday Flame), 1930 proscribed in 1930.</li>
+                        <li>Shesh Saogat (The last Offerings), 1958.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 footer-column">
+                    <h5>About the Author</h5>
+                    <p>Made by <span class="first-span">Md.Abu Taher</span> for a Freecodecamp tribute challenge.</p>
+                </div>
+                <div class="col-md-2 footer-column">
+                    <h5>Techs Used</h5>
+                    <p class="second-span">Sementic UI</p>
+                </div>
+                <div class="col-md-5 footer-column">
+                    <h5>Content Disclaimer</h5>
+                    <p>The content of this website is mostly copied from <span class="last-span">Wikipedia, BiographyBD, Thefamouspeople.</span> Original credits go to the respective authors.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
